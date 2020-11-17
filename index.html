@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<style>
+    table,th,td
+    {
+     border:1px solid red;
+    }
+    th,td{
+        padding: 5px;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <button type="button" onclick="loadXML()">Get Employee Details</button>
+    <br><br>
+    <table id="demo"></table>
+    <script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","staff.xml",false);
+            console.log(xhttp.readyState);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>ENAME</th><th>EAGE</th></tr>";
+            var x=xmlDoc.getElementsByTagName("employee");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("ename")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("eage")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
+</body>
+</html>

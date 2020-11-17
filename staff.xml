@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<company>
+	<employee>
+		<ename>Prabu</ename>
+		<eage>22</eage>
+		<esalary>3000</esalary>
+	</employee>
+	<employee>
+		<ename>Indu</ename>
+		<eage>20</eage>
+		<esalary>3000</esalary>
+	</employee>
+	<employee>
+		<ename>Rithul</ename>
+		<eage>22</eage>
+		<esalary>3000</esalary>
+	</employee>
+</company>
