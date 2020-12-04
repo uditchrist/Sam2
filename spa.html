@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="angular.min.js"></script>
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="angular-ui-router.min.js"></script>
+<script src="spa2.js"></script>
+</head>
+<body ng-app="myapp">
+    <h2>AngularJS Sample Application</h2>
+    <div ng-app = "myapp">
+       <p><a href = "#/home">Home</a></p>
+       <p><a href = "#/about">About</a></p>
+       <p><a href = "#/contact">Contact</a></p>
+       <div>
+           <ng-view></ng-view>
+       </div>
+    
+       
+     </script>
+    </div>
+    </body>
+</html>
