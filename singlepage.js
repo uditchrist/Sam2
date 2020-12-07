@@ -9,7 +9,8 @@ angular.module('myapp',['ngRoute'])
             controller:'homectrl'
         }).when('/contact',{
         templateUrl:'christ/contact.html'
-    });
+    })
+    .otherwise({redirectTo:'/'})
 })
 .controller('mainController',function(){
 
